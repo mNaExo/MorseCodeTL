@@ -30,4 +30,40 @@ public class tree {
         this.rightSub = pRightSub;
     }
 
+    /**
+     * Rückgabe der Wurzel-node
+     * @return root - Wurzel
+     */
+    protected node getRoot() {return this.root;}
+
+    /**
+     * Rückgabe der Left-Child-Node
+     * @return leftSub - Left-Child
+     */
+    protected node getLeftSub() {return this.leftSub;}
+
+    /**
+     * Rückgabe der Right-Child-Node
+     * @return rightSub - Right-Child
+     */
+    protected node getRightSub() {return this.rightSub;}
+
+    /**
+     * Änderung der Root-Node
+     * @param pNewRoot - neue Root-Node
+     */
+    protected void setRoot(node pNewRoot) {this.root = pNewRoot;}
+
+    /**
+     * Änderung der Left-Child-Node
+     * @param pNewLeftSub - neue Left-Child-Node
+     */
+    protected void setLeftSub(node pNewLeftSub) {this.leftSub = pNewLeftSub;}
+
+    /**
+     * Änderung der Right-Child-Node
+     * @param pNewRightSub - neue Right-Child-Node
+     */
+    protected void setRightSub(node pNewRightSub) {this.rightSub = pNewRightSub;}
+
 }
