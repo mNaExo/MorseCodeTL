@@ -1,5 +1,11 @@
 package binary_tree;
 
+/**
+ * Erstellt von maxim
+ * 05.05.2020 - 02:09
+ * Projekt: MorseCodeTL
+ */
+
 public class node {
 
     // direkter Vorfahre
@@ -16,7 +22,7 @@ public class node {
 
     /**
      * Konstruktor für ein Wurzel-Node
-     * @param pVal
+     * @param pVal Wert des Nodes
      */
     node(String pVal) {
         this.supNode = null;
@@ -27,8 +33,8 @@ public class node {
 
     /**
      * Konstruktor für ein Standard-Node
-     * @param pVal
-     * @param pSupNode
+     * @param pVal Wert des Nodes
+     * @param pSupNode Parent-Node
      */
     node(String pVal, node pSupNode) {
         this.supNode = pSupNode;
@@ -63,25 +69,25 @@ public class node {
 
     /**
      * Änderung des Node-Wertes
-     * @param pVal
+     * @param pVal neuer Wert
      */
     protected void setVal(String pVal) {this.val = pVal;}
 
     /**
      * Änderung des rechten Nachfahre-Nodes
-     * @param pNewRightSubNode
+     * @param pNewRightSubNode neus Right-Child-Node
      */
     protected void setRightSubNode(node pNewRightSubNode) {this.rightSubNode = pNewRightSubNode;}
 
     /**
      * Änderung des linken Nachfahre-Nodes
-     * @param pNewLeftSubNode
+     * @param pNewLeftSubNode neues Left-Child-Node
      */
     protected void setLeftSubNode(node pNewLeftSubNode) {this.leftSubNode = pNewLeftSubNode;}
 
     /**
      * Änderung des Vorgänger-Nodes
-     * @param pNewSupNode
+     * @param pNewSupNode neues Parent-Node
      */
     protected void setSupNode(node pNewSupNode) {this.supNode = pNewSupNode;}
 }
