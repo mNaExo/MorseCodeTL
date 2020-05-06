@@ -1,5 +1,7 @@
 package binary_tree;
 
+import java.util.ArrayList;
+
 /**
  * Erstellt von Manhhao
  * 06.05.2020 - 15:48
@@ -60,6 +62,22 @@ public class Translator {
     }
 
     /**
+     * Methode zum Übersetzen von Text zu Morsecode
+     * Beschreibung folgt...
+     * @param pPlainText der zu übersetzende Text
+     * @return übersetztes Zeichen
+     */
+    private String decode(String pPlainText) {
+
+        String decodedText = "";
+        String[] plainTextLines = pPlainText.split(". ");
+        String[] plainTextWords = pPlainText.split(" ");
+        ArrayList<String> decodedLines = new ArrayList<String>();
+
+        return decodedText;
+    }
+
+    /**
      * @param morseCode der zu übersetzende Code
      * @return das übersetzte Zeichen
      * Methode zum Übersetzen eines Buchstaben von Morsecode zu Text
@@ -72,7 +90,7 @@ public class Translator {
      *
      * Wichtig: übersetzt nur ein Zeichen!!!
      */
-    private String translate(String morseCode) {
+    private String encode(String morseCode) {
         Node current = tree.getRoot();
         boolean valid = true;
         for (int i = 0; i < morseCode.length(); i++) {
@@ -107,7 +125,7 @@ public class Translator {
     /**
      * @param morse der in Morsecode geschriebene
      * @return der übersetzte Text
-     * Erweiterung der Methode translate(String morseCode) um kompletten Text zu Übersetzen
+     * Erweiterung der Methode encode(String morseCode) um kompletten Text zu Übersetzen
      * der Parameter morse wird in ein Array geteilt und jedes Zeichen einzeln übersetzt
      */
     public String morseToText(String morse) {
@@ -126,7 +144,7 @@ public class Translator {
          */
         for (String a : zeichenArray) {
             /* Addiere einfach den übersetzten Buchstaben auf die bisher übersetzten Buchstaben, es sollte am Ende jeder Buchstabe übersetzt sein */
-            uebersetzung += translate(a);
+            uebersetzung += encode(a);
         }
 
         return uebersetzung;
