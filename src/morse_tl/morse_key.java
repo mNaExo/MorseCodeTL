@@ -6,9 +6,7 @@ package morse_tl;
  * Projekt: MorseCodeTL
  */
 public enum morse_key {
-    /*
-    TODO: Alle Buchstaben mit entsprechendem Code eintippen
-     */
+
     A(".-"),
     B("-..."),
     C("-.-"),

@@ -97,9 +97,12 @@ public class Tree {
 
     /**
      * Rückgabe der Wurzel-node
+     *
      * @return root Wurzel
      */
-    protected Node getRoot() {return this.root;}
+    public Node getRoot() {
+        return this.root;
+    }
 
     /**
      * Rückgabe der Left-Child-Node

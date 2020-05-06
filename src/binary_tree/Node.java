@@ -56,27 +56,36 @@ public class Node {
 
     /**
      * Rückgabe des Wertes
+     *
      * @return val
      */
-    protected String getVal() {return this.val;}
+    public String getVal() {
+        return this.val;
+    }
 
     /**
      * Rückgabe des Vorgänger-Nodes
      * @return supNode
      */
-    protected Node getSupNode() {return this.supNode;}
+    protected Node getSupNode() {return this.supNode;
+    }
 
     /**
      * Rückgabe des linken Nachfahre-Nodes
+     *
      * @return leftSupNode
      */
-    protected Node getLeftSubNode() {return this.leftSubNode;}
+    public Node getLeftSubNode() {
+        return this.leftSubNode;
+    }
 
     /**
      * Rückgabe des rechten Nachfahre-Nodes
+     *
      * @return rightSupNode
      */
-    protected Node getRightSubNode() {return this.rightSubNode;}
+    public Node getRightSubNode() {
+        return this.rightSubNode;}
 
     /**
      * Änderung des Node-Wertes
