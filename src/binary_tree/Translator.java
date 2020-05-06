@@ -45,13 +45,13 @@ public class Translator {
 
             if (direction.equals(".")) {
                 if (current.getLeftSubNode() == null)
-                    current.setLeftSubNode(new Node(null));
+                    current.setLeftSubNode(new Node(null, current, Relation.LEFT));
 
                 current = current.getLeftSubNode();
             }
             else if (direction.equals("-")) {
                 if (current.getRightSubNode() == null)
-                    current.setRightSubNode(new Node(null));
+                    current.setRightSubNode(new Node(null, current, Relation.RIGHT));
 
                 current = current.getRightSubNode();
             }
