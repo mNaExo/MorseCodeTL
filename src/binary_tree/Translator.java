@@ -62,17 +62,31 @@ public class Translator {
     }
 
     /**
-     * Methode zum Übersetzen von Text zu Morsecode
+     * Methode zum Übersetzen von Text zu Morsecode;
      * Beschreibung folgt...
      * @param pPlainText der zu übersetzende Text
      * @return übersetztes Zeichen
      */
     private String decode(String pPlainText) {
 
+        // Hier soll später das Ergebnis rein
         String decodedText = "";
+
+        // Mehrstufige Aufteilung des Eingabestrings
+        // Zuerst: in Sätze / Lines aufteilen
         String[] plainTextLines = pPlainText.split(". ");
+
+        // Dann: in Wörter aufteilen
         String[] plainTextWords = pPlainText.split(" ");
-        ArrayList<String> decodedLines = new ArrayList<String>();
+
+        //Zueletzt: in Buchstaben aufteilen
+        String[] plainTextLetters = pPlainText.split("\\p{Alpha}+");
+
+        String currentLine;
+
+        ArrayList<String> decodedLines = new ArrayList<>();
+
+        // while ()
 
         return decodedText;
     }
