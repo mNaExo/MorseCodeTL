@@ -38,25 +38,25 @@ public class Translator {
      * Knotens gesetzt.
      */
     private void addMorseToTree(String morseCode, String letter) {
-        Node position = tree.getRoot();
+        Node current = tree.getRoot();
 
         for (int i = 0; i < morseCode.length(); i++) {
             String direction = morseCode.substring(i, i + 1);
 
             if (direction.equals(".")) {
-                if (position.getLeftSubNode() == null)
-                    position.setLeftSubNode(new Node(null));
+                if (current.getLeftSubNode() == null)
+                    current.setLeftSubNode(new Node(null));
 
-                position = position.getLeftSubNode();
+                current = current.getLeftSubNode();
             }
             else if (direction.equals("-")) {
-                if (position.getRightSubNode() == null)
-                    position.setRightSubNode(new Node(null));
+                if (current.getRightSubNode() == null)
+                    current.setRightSubNode(new Node(null));
 
-                position = position.getRightSubNode();
+                current = current.getRightSubNode();
             }
         }
-        position.setVal(letter);
+        current.setVal(letter);
     }
 
     /**
@@ -73,33 +73,33 @@ public class Translator {
      * Wichtig: übersetzt nur ein Zeichen!!!
      */
     private String translate(String morseCode) {
-        Node position = tree.getRoot();
+        Node current = tree.getRoot();
         boolean valid = true;
         for (int i = 0; i < morseCode.length(); i++) {
             String direction = morseCode.substring(i, i + 1);
 
             if (direction.equals(".")) {
-                if (position.getLeftSubNode() == null) {
+                if (current.getLeftSubNode() == null) {
                     valid = false;
                     break;
                 }
                 else {
-                    position = position.getLeftSubNode();
+                    current = current.getLeftSubNode();
                 }
             }
             else if (direction.equals("-")) {
-                if (position.getRightSubNode() == null) {
+                if (current.getRightSubNode() == null) {
                     valid = false;
                     break;
                 }
                 else {
-                    position = position.getRightSubNode();
+                    current = current.getRightSubNode();
                 }
             }
         }
 
         if (valid)
-            return position.getVal();
+            return current.getVal();
 
         return "";
     }
