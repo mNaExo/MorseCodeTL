@@ -1,5 +1,7 @@
 package binary_tree;
 
+import java.util.ArrayList;
+
 /**
  * Erstellt von maxim
  * 05.05.2020 - 02:31
@@ -50,11 +52,35 @@ public class Tree {
     }
 
     /**
-     * Methode zum Hinzufügen von Nodes zu einem Baum
-     * @param toBeAdded Node, die hinzugefügt werden soll
+     * Der entsprechende Morsecode des Buchstaben durchläuft
+     * jedes einzelne Zeichen von morseCode und bewegt sich je
+     * nachdem ob der jetzige Buchstabe "." oder "-" ist nach links oder rechts.
+     * Sind alle Zeichen durchlaufen, wird letter als Wert des jetzigen
+     * Knotens gesetzt.
+     * @param letter der zu hinzuzufügende Buchstabe
+     * @param morseCode das Morse-Äquivalent zum hinzugefügten Buchstaben
+     *
      */
-    protected void addNodeToTree(Node toBeAdded) {
-        //TODO: Methode implementieren
+    private void addMorseToTree(String morseCode, String letter) {
+        Node current = this.getRoot();
+
+        for (int i = 0; i < morseCode.length(); i++) {
+            String direction = morseCode.substring(i, i + 1);
+
+            if (direction.equals(".")) {
+                if (current.getLeftSubNode() == null)
+                    current.setLeftSubNode(new Node(null, current, Relation.LEFT));
+
+                current = current.getLeftSubNode();
+            }
+            else if (direction.equals("-")) {
+                if (current.getRightSubNode() == null)
+                    current.setRightSubNode(new Node(null, current, Relation.RIGHT));
+
+                current = current.getRightSubNode();
+            }
+        }
+        current.setVal(letter);
     }
 
     /**

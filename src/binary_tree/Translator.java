@@ -28,37 +28,7 @@ public class Translator {
     public Translator() {
         tree = new Tree(new Node(""));
 
-        addMorseToTree(".", "E");
-    }
-
-    /**
-     * @param letter der zu hinzufügende Buchstabe
-     * @param morseCode der entsprechende Morsecode des Buchstaben
-     * Durchläuft jedes einzelne Zeichen von morseCode und bewegt sich je
-     * nachdem ob der jetzige Buchstabe . oder - ist nach links oder rechts.
-     * Sind alle Zeichen durchlaufen, wird letter als Wert des jetzigen
-     * Knotens gesetzt.
-     */
-    private void addMorseToTree(String morseCode, String letter) {
-        Node current = tree.getRoot();
-
-        for (int i = 0; i < morseCode.length(); i++) {
-            String direction = morseCode.substring(i, i + 1);
-
-            if (direction.equals(".")) {
-                if (current.getLeftSubNode() == null)
-                    current.setLeftSubNode(new Node(null, current, Relation.LEFT));
-
-                current = current.getLeftSubNode();
-            }
-            else if (direction.equals("-")) {
-                if (current.getRightSubNode() == null)
-                    current.setRightSubNode(new Node(null, current, Relation.RIGHT));
-
-                current = current.getRightSubNode();
-            }
-        }
-        current.setVal(letter);
+        // addMorseToTree(".", "E");
     }
 
     /**

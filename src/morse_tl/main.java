@@ -1,4 +1,4 @@
-package morse;
+package morse_tl;
 
 /**
  * Erstellt von maxim
