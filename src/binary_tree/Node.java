@@ -1,7 +1,5 @@
 package binary_tree;
 
-import javax.management.relation.RelationType;
-
 /**
  * Erstellt von maxim
  * 05.05.2020 - 02:09

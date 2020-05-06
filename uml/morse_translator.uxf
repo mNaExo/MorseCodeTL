@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2">
-  <zoom_level>8</zoom_level>
+  <zoom_level>5</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>544</x>
-      <y>184</y>
-      <w>200</w>
-      <h>152</h>
+      <x>320</x>
+      <y>125</y>
+      <w>125</w>
+      <h>95</h>
     </coordinates>
-    <panel_attributes>Package::binary_tree
+    <panel_attributes>&lt;&lt;class&gt;&gt;
+Package::binary_tree
 node
 --
 - node: supNode
+- Relation: relToSupNode
 - node: lSubNode
+- Relation: relToLSubNode
 - node: rSubNode
+- Relation: relToRSubNode
 - String: value
 --
 + node(String: pVal)
@@ -27,12 +31,13 @@ node
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>192</x>
-      <y>192</y>
-      <w>200</w>
-      <h>152</h>
+      <x>100</x>
+      <y>130</y>
+      <w>125</w>
+      <h>95</h>
     </coordinates>
-    <panel_attributes>Package:: binary_tree
+    <panel_attributes>&lt;&lt;class&gt;&gt;
+Package:: binary_tree
 tree
 --
 - node: current
@@ -49,27 +54,134 @@ tree
     <additional_attributes/>
   </element>
   <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>80</x>
+      <y>555</y>
+      <w>410</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>gui
+--
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>255</y>
+      <w>105</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+Package::FatClass
+relation
+--
+ROOT
+LEFT
+RIGHT</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
     <id>Relation</id>
     <coordinates>
-      <x>384</x>
-      <y>256</y>
-      <w>176</w>
-      <h>24</h>
+      <x>220</x>
+      <y>170</y>
+      <w>110</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>lt=&lt;..</panel_attributes>
     <additional_attributes>200.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>215</y>
+      <w>75</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;130.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>160</x>
-      <y>80</y>
-      <w>656</w>
-      <h>392</h>
+      <x>80</x>
+      <y>75</y>
+      <w>410</w>
+      <h>320</h>
     </coordinates>
     <panel_attributes>binary_tree
 --
 bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>580</x>
+      <y>150</y>
+      <w>410</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>morse
+--
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>635</x>
+      <y>205</y>
+      <w>105</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;class&gt;&gt;
+Package::morse
+main
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>795</x>
+      <y>290</y>
+      <w>105</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+Package::morse
+morse_key
+--
+a(.-)
+etc.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>140</x>
+      <y>640</y>
+      <w>105</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;class&gt;&gt;
+Package::gui
+translator_gui
+--
+-id: Long
+_-ClassAttribute: Long_
+--
+#Operation(i: int): int
+/+AbstractOperation()/
+--
+Responsibilities
+-- Resp1
+*-- Resp2*</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
