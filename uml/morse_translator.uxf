@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>544</x>
+      <y>184</y>
+      <w>200</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Package::binary_tree
+node
+--
+- node: supNode
+- node: lSubNode
+- node: rSubNode
+- String: value
+--
++ node(String: pVal)
++ node(String: pVal, node: pSupNode)
++ Get- und Set-Methoden für
+   alle Attribute
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>192</x>
+      <y>192</y>
+      <w>200</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Package:: binary_tree
+tree
+--
+- node: current
+- node: root
+- node: lSub
+- node: rSub
+--
++ tree(node: pRoot)
++ tree(node: pRoot, node: pLSubNode
+   node: pRSubNode)
++ addCharacter(char: pChar,
++ Get- und Set-Methoden für 
+   alle Attribute</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>384</x>
+      <y>256</y>
+      <w>176</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>200.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>160</x>
+      <y>80</y>
+      <w>656</w>
+      <h>392</h>
+    </coordinates>
+    <panel_attributes>binary_tree
+--
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
