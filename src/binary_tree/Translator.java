@@ -115,8 +115,8 @@ public class Translator {
         String uebersetzung = "";
 
         /*
-         * https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#split(java.lang.String), der String wird am Leerzeichen getrennt
-         * und in ein Array von Strings gegeben
+         * https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#split(java.lang.String), der String wird am Slash in mehrere einzelne Strings geteilt
+         * und in ein Array gegeben
          */
         String[] zeichenArray = morse.split("/");
 
