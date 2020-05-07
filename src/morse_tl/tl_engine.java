@@ -51,7 +51,7 @@ public class tl_engine {
     /**
      * Methode zum Übersetzen eines Buchstaben von Morsecode zu Text
      * Nutzt das gleiche Prinzip wie addMorseToTree(String morseCode, String letter):
-     * Der String morseCode wird zunächst an den / in mehrere Strings geteilt und jedes der
+     * Der String morseCode wird zunächst an den Leerzeichen in mehrere Strings geteilt und jedes der
      * Strings mithilfe einer Schleife durchlaufen.
      * Durchläuft jedes einzelne Zeichen von singleMorse und bewegt sich je
      * nachdem ob der jetzige Buchstabe . oder - ist nach links oder rechts.
@@ -70,7 +70,7 @@ public class tl_engine {
          * https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#split(java.lang.String), der String wird am Slash in mehrere einzelne Strings geteilt
          * und in ein Array gegeben
          */
-        String[] morseArray = pMorseCode.split("/");
+        String[] morseArray = pMorseCode.split(" ");
 
         /*
          * Eine sogenannte for each-Schleife, hier wird nicht wie bei einer normalen for-Schleife mithilfe einer Variable iteriert, sondern es wird durch
