@@ -2,6 +2,9 @@ package morse_tl;
 
 import binary_tree.*;
 
+import javax.swing.*;
+
+import translator_gui.*;
 /**
  * Erstellt von maxim
  * 05.05.2020 - 15:09
@@ -41,6 +44,10 @@ public class main {
         morseTree.insertMorse(morse_key.Y);
         morseTree.insertMorse(morse_key.Z);
 
-        System.out.println("Alphabet: " + translator.encodeViaRelations("ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
+        JFrame frame = new JFrame("MorseCode Übersetzer");
+        frame.setContentPane(new translator_gui(translator).main);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
     }
 }
