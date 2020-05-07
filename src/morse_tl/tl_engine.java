@@ -24,10 +24,10 @@ public class tl_engine {
      * @param pPlainText der zu übersetzende Text
      * @return übersetztes Zeichen
      */
-    private String decode(String pPlainText) {
+    private String encode(String pPlainText) {
 
         // Hier soll später das Ergebnis rein
-        String decodedText = "";
+        String encodedText = "";
 
         // Mehrstufige Aufteilung des Eingabestrings
         // Zuerst: in Sätze / Lines aufteilen
@@ -45,7 +45,7 @@ public class tl_engine {
 
         // while ()
 
-        return decodedText;
+        return encodedText;
     }
 
     /**
@@ -59,18 +59,18 @@ public class tl_engine {
      * auf false gesetzt und es wird nichts auf uebersetzung addiert.
      * Falls erfolgreich jedes Zeichen durchlaufen wird, so wird der Wert des jetzigen Knotens addiert.
      * <p>
-     * @param morseCode der in Morsecode geschriebene Text
+     * @param pMorseCode der in Morsecode geschriebene Text
      * @return der übersetzte Text
      */
-    public String encode(String morseCode) {
+    public String decode(String pMorseCode) {
         /* Der String in dem sich später alle Zeichen befinden sollen */
-        String uebersetzung = "";
+        String decodedText = "";
 
         /*
          * https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#split(java.lang.String), der String wird am Slash in mehrere einzelne Strings geteilt
          * und in ein Array gegeben
          */
-        String[] morseArray = morseCode.split("/");
+        String[] morseArray = pMorseCode.split("/");
 
         /*
          * Eine sogenannte for each-Schleife, hier wird nicht wie bei einer normalen for-Schleife mithilfe einer Variable iteriert, sondern es wird durch
@@ -99,8 +99,19 @@ public class tl_engine {
                 }
             }
             if (valid)
-                uebersetzung += current.getVal();
+                decodedText += current.getVal();
         }
-        return uebersetzung;
+        return decodedText;
+    }
+
+    public String encodeUsingRelations(String pText) {
+        String encodedText = "";
+
+        for (int i = 0; i < pText.length(); i++) {
+            String currentLetter = pText.substring(i, i + 1);
+
+        }
+
+        return encodedText;
     }
 }

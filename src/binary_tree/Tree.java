@@ -84,6 +84,28 @@ public class Tree {
     }
 
     /**
+     * preOrder Suchdurchlauf
+     * hoffentlich klappt das haha
+     */
+    protected Node preOrderSearch(Node pNode, String pVal) {
+        if(pNode != null) {
+            if (pNode.getVal().equals(pVal)) {
+                return pNode;
+            }
+            else {
+                Node recursiveLeft = preOrderSearch(pNode.getLeftSubNode(), pVal);
+
+                if (recursiveLeft != null)
+                    return recursiveLeft;
+
+                return preOrderSearch(pNode.getRightSubNode(), pVal);
+            }
+        }
+        else
+            return null;
+    }
+
+    /**
      * Rückgabe der CurrentNode
      * @return currentNode aktuelle Node
      */
