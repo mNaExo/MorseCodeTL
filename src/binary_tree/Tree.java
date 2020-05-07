@@ -57,11 +57,11 @@ public class Tree {
      * nachdem ob der jetzige Buchstabe "." oder "-" ist nach links oder rechts.
      * Sind alle Zeichen durchlaufen, wird letter als Wert des jetzigen
      * Knotens gesetzt.
-     * @param letter der zu hinzuzufügende Buchstabe
-     * @param morseCode das Morse-Äquivalent zum hinzugefügten Buchstaben
      *
+     * @param letter    der zu hinzuzufügende Buchstabe
+     * @param morseCode das Morse-Äquivalent zum hinzugefügten Buchstaben
      */
-    private void addMorseToTree(String morseCode, String letter) {
+    private void insertMorse(String morseCode, String letter) {
         Node current = this.getRoot();
 
         for (int i = 0; i < morseCode.length(); i++) {
