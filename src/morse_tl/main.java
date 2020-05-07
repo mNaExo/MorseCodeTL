@@ -10,7 +10,7 @@ import binary_tree.*;
 
 public class main {
     public static void main(String[] args) {
-        Node wurzel = new Node("", null, Relation.RIGHT);
+        Node wurzel = new Node("", null, Relation.ROOT);
         Tree morseTree = new Tree(wurzel);
         tl_engine translator = new tl_engine(morseTree);
 

@@ -135,7 +135,7 @@ public class tl_engine {
                     morseKey += "-";
             }
 
-            encodedText += morseKey;
+            encodedText += morseKey += " ";
         }
         return encodedText;
     }
