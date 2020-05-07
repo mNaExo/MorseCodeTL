@@ -86,8 +86,9 @@ public class Tree {
     /**
      * preOrder Suchdurchlauf
      * hoffentlich klappt das haha
+     * beschreibung kommt noch
      */
-    protected Node preOrderSearch(Node pNode, String pVal) {
+    public Node preOrderSearch(Node pNode, String pVal) {
         if(pNode != null) {
             if (pNode.getVal().equals(pVal)) {
                 return pNode;

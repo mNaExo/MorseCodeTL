@@ -104,14 +104,40 @@ public class tl_engine {
         return decodedText;
     }
 
-    public String encodeUsingRelations(String pText) {
+    public String encodeViaRelations(String pText) {
         String encodedText = "";
 
         for (int i = 0; i < pText.length(); i++) {
+            String morseKey = "";
+            ArrayList<Relation> relations = new ArrayList<>();
             String currentLetter = pText.substring(i, i + 1);
+            Node node = tree.preOrderSearch(tree.getRoot(), currentLetter);
 
+            if (node != null) {
+                while (true) {
+                    if (node.getRelToSupNode() == Relation.LEFT) {
+                        relations.add(Relation.LEFT);
+                        node = node.getSupNode();
+                    }
+                    else if (node.getRelToSupNode() == Relation.RIGHT) {
+                        relations.add(Relation.RIGHT);
+                        node = node.getSupNode();
+                    }
+                    else if (node.getRelToSupNode() == Relation.ROOT){
+                        break;
+                    }
+                }
+            }
+
+            for (int j = relations.size() - 1; i >= 0; i--) {
+                if (relations.get(i) == Relation.LEFT)
+                    morseKey += ".";
+                else if (relations.get(i) == Relation.RIGHT)
+                    morseKey += "-";
+            }
+
+            encodedText += morseKey;
         }
-
         return encodedText;
     }
 }

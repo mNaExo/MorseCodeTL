@@ -67,7 +67,7 @@ public class Node {
      * Rückgabe des Vorgänger-Nodes
      * @return supNode
      */
-    protected Node getSupNode() {return this.supNode;
+    public Node getSupNode() {return this.supNode;
     }
 
     /**
@@ -115,7 +115,7 @@ public class Node {
      * Rückgabe der Relation zum root-node
      * @return relToSupNode relative Position zum supNode
      */
-    protected Relation getRelToSupNode() {return this.relToSupNode;}
+    public Relation getRelToSupNode() {return this.relToSupNode;}
 
     /**
      * Rückgabe der Relation zum leftSub-node
