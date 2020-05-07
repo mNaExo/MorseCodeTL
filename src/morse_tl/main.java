@@ -14,8 +14,33 @@ public class main {
         Tree morseTree = new Tree(wurzel);
         tl_engine translator = new tl_engine(morseTree);
 
-        morseTree.insertMorse(".", "E");
+        morseTree.insertMorse(morse_key.A);
+        morseTree.insertMorse(morse_key.B);
+        morseTree.insertMorse(morse_key.C);
+        morseTree.insertMorse(morse_key.D);
+        morseTree.insertMorse(morse_key.E);
+        morseTree.insertMorse(morse_key.F);
+        morseTree.insertMorse(morse_key.G);
+        morseTree.insertMorse(morse_key.H);
+        morseTree.insertMorse(morse_key.I);
+        morseTree.insertMorse(morse_key.J);
+        morseTree.insertMorse(morse_key.K);
+        morseTree.insertMorse(morse_key.L);
+        morseTree.insertMorse(morse_key.M);
+        morseTree.insertMorse(morse_key.N);
+        morseTree.insertMorse(morse_key.O);
+        morseTree.insertMorse(morse_key.P);
+        morseTree.insertMorse(morse_key.Q);
+        morseTree.insertMorse(morse_key.R);
+        morseTree.insertMorse(morse_key.S);
+        morseTree.insertMorse(morse_key.T);
+        morseTree.insertMorse(morse_key.U);
+        morseTree.insertMorse(morse_key.V);
+        morseTree.insertMorse(morse_key.W);
+        morseTree.insertMorse(morse_key.X);
+        morseTree.insertMorse(morse_key.Y);
+        morseTree.insertMorse(morse_key.Z);
 
-        System.out.println("E: " + translator.encodeViaRelations("E"));
+        System.out.println("Alphabet: " + translator.encodeViaRelations("ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
     }
 }

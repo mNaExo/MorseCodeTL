@@ -2,6 +2,8 @@ package binary_tree;
 
 import java.util.ArrayList;
 
+import morse_tl.morse_key;
+
 /**
  * Erstellt von maxim
  * 05.05.2020 - 02:31
@@ -58,14 +60,13 @@ public class Tree {
      * Sind alle Zeichen durchlaufen, wird letter als Wert des jetzigen
      * Knotens gesetzt.
      *
-     * @param letter    der zu hinzuzufügende Buchstabe
-     * @param morseCode das Morse-Äquivalent zum hinzugefügten Buchstaben
+     * @param morseKey Buchstabe aus morseKey enum (enthält sowohl morseCode als auch Buchstabe als seperate Strings)
      */
-    public void insertMorse(String morseCode, String letter) {
+    public void insertMorse(morse_key morseKey) {
         Node current = this.getRoot();
 
-        for (int i = 0; i < morseCode.length(); i++) {
-            String direction = morseCode.substring(i, i + 1);
+        for (int i = 0; i < morseKey.morseCode.length(); i++) {
+            String direction = morseKey.morseCode.substring(i, i + 1);
 
             if (direction.equals(".")) {
                 if (current.getLeftSubNode() == null)
@@ -80,7 +81,7 @@ public class Tree {
                 current = current.getRightSubNode();
             }
         }
-        current.setVal(letter);
+        current.setVal(morseKey.letter);
     }
 
     /**
