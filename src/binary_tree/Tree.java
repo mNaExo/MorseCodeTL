@@ -31,7 +31,7 @@ public class Tree {
      * Objekt im Tree ist
      * @param pRoot Wurzel-node
      */
-    Tree(Node pRoot) {
+    public Tree(Node pRoot) {
         this.currentNode = pRoot;
         this.root = pRoot;
         this.leftSub = null;
@@ -44,7 +44,7 @@ public class Tree {
      * @param pLeftSub "left-child"
      * @param pRightSub "right-child"
      */
-    Tree(Node pRoot, Node pLeftSub, Node pRightSub) {
+    public Tree(Node pRoot, Node pLeftSub, Node pRightSub) {
         this.currentNode = pRoot;
         this.root = pRoot;
         this.leftSub = pLeftSub;
@@ -61,7 +61,7 @@ public class Tree {
      * @param letter    der zu hinzuzufügende Buchstabe
      * @param morseCode das Morse-Äquivalent zum hinzugefügten Buchstaben
      */
-    private void insertMorse(String morseCode, String letter) {
+    public void insertMorse(String morseCode, String letter) {
         Node current = this.getRoot();
 
         for (int i = 0; i < morseCode.length(); i++) {

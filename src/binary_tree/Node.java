@@ -29,7 +29,7 @@ public class Node {
      * Konstruktor für ein Wurzel-Node
      * @param pVal Wert des Nodes
      */
-    Node(String pVal) {
+    public Node(String pVal) {
         this.supNode = null;
         this.relToSupNode = null;
         this.leftSubNode = null;
@@ -44,7 +44,7 @@ public class Node {
      * @param pVal Wert des Nodes
      * @param pSupNode Parent-Node
      */
-    Node(String pVal, Node pSupNode, Relation pRelToSup) {
+    public Node(String pVal, Node pSupNode, Relation pRelToSup) {
         this.supNode = pSupNode;
         this.relToSupNode = pRelToSup;
         this.leftSubNode = null;

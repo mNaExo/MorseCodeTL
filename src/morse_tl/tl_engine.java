@@ -113,23 +113,22 @@ public class tl_engine {
             String currentLetter = pText.substring(i, i + 1);
             Node node = tree.preOrderSearch(tree.getRoot(), currentLetter);
 
-            if (node != null) {
-                while (true) {
-                    if (node.getRelToSupNode() == Relation.LEFT) {
-                        relations.add(Relation.LEFT);
-                        node = node.getSupNode();
-                    }
-                    else if (node.getRelToSupNode() == Relation.RIGHT) {
-                        relations.add(Relation.RIGHT);
-                        node = node.getSupNode();
-                    }
-                    else if (node.getRelToSupNode() == Relation.ROOT){
-                        break;
-                    }
+            while (node != null) {
+                if (node.getRelToSupNode() == Relation.LEFT) {
+                   relations.add(Relation.LEFT);
+                   node = node.getSupNode();
+                }
+                else if (node.getRelToSupNode() == Relation.RIGHT) {
+                    relations.add(Relation.RIGHT);
+                    node = node.getSupNode();
+                }
+                else if (node.getRelToSupNode() == Relation.ROOT){
+                    break;
                 }
             }
 
-            for (int j = relations.size() - 1; i >= 0; i--) {
+            for (int j = relations.size() - 1; j >= 0; j--) {
+                System.out.println(relations.get(j));
                 if (relations.get(j) == Relation.LEFT)
                     morseKey += ".";
                 else if (relations.get(j) == Relation.RIGHT)
