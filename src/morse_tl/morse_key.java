@@ -9,7 +9,7 @@ public enum morse_key {
 
     A(".-", "A"),
     B("-...", "B"),
-    C("-.-", "C"),
+    C("-.-.", "C"),
     D("-..", "D"),
     E(".", "E"),
     F("..-.", "F"),
@@ -32,7 +32,7 @@ public enum morse_key {
     W(".--", "W"),
     X("-..-", "X"),
     Y("-.--", "Y"),
-    Z("--.", "Z");
+    Z("--..", "Z");
 
     public final String morseCode;
     public final String letter;
