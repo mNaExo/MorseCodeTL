@@ -128,7 +128,6 @@ public class tl_engine {
             }
 
             for (int j = relations.size() - 1; j >= 0; j--) {
-                System.out.println(relations.get(j));
                 if (relations.get(j) == Relation.LEFT)
                     morseKey += ".";
                 else if (relations.get(j) == Relation.RIGHT)
