@@ -2,6 +2,8 @@ package morse_tl;
 
 import binary_tree.*;
 
+import java.util.ArrayList;
+
 /**
  * Erstellt von maxim
  * 06.05.2020 - 21:04
@@ -13,6 +15,37 @@ public class tl_engine {
 
     public tl_engine(Tree pTree) {
         this.tree = pTree;
+    }
+
+    /**
+     * Methode zum Übersetzen von Text zu Morsecode;
+     * Beschreibung folgt...
+     *
+     * @param pPlainText der zu übersetzende Text
+     * @return übersetztes Zeichen
+     */
+    private String decode(String pPlainText) {
+
+        // Hier soll später das Ergebnis rein
+        String decodedText = "";
+
+        // Mehrstufige Aufteilung des Eingabestrings
+        // Zuerst: in Sätze / Lines aufteilen
+        String[] plainTextLines = pPlainText.split(". ");
+
+        // Dann: in Wörter aufteilen
+        String[] plainTextWords = pPlainText.split(" ");
+
+        //Zueletzt: in Buchstaben aufteilen
+        String[] plainTextLetters = pPlainText.split("\\p{Alpha}+");
+
+        String currentLine;
+
+        ArrayList<String> decodedLines = new ArrayList<>();
+
+        // while ()
+
+        return decodedText;
     }
 
     /**
