@@ -130,9 +130,9 @@ public class tl_engine {
             }
 
             for (int j = relations.size() - 1; i >= 0; i--) {
-                if (relations.get(i) == Relation.LEFT)
+                if (relations.get(j) == Relation.LEFT)
                     morseKey += ".";
-                else if (relations.get(i) == Relation.RIGHT)
+                else if (relations.get(j) == Relation.RIGHT)
                     morseKey += "-";
             }
 
