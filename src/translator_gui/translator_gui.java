@@ -18,6 +18,8 @@ public class translator_gui {
     private JTextField textField2;
     public JPanel main;
     private JTextField textField3;
+    private JRadioButton textZurMorseRadioButton;
+    private JRadioButton morseZuTextRadioButton;
     private JButton button2;
     private JTextField textField4;
 
