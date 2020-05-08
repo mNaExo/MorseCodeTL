@@ -13,27 +13,31 @@ import java.awt.event.ActionListener;
  */
 
 public class translator_gui {
-    private JTextField textField1;
-    private JButton button1;
+    private JTextField morseText;
+    private JButton resetForm;
     private JTextField textField2;
     public JPanel main;
-    private JTextField textField3;
-    private JRadioButton textZurMorseRadioButton;
-    private JRadioButton morseZuTextRadioButton;
-    private JButton button2;
+    private JTextField plainText;
+    private JRadioButton txtToMorse;
+    private JRadioButton morseToTxt;
+    private JButton translateBttn;
     private JTextField textField4;
 
     public translator_gui(tl_engine translator) {
-        button1.addActionListener(new ActionListener() {
+        resetForm.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                textField2.setText(translator.decode(textField1.getText()));
+                textField2.setText(translator.decode(morseText.getText()));
             }
         });
 
-        button2.addActionListener(new ActionListener() {
+        translateBttn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                textField4.setText(translator.encodeViaRelations(textField3.getText()));
+                textField4.setText(translator.encodeViaRelations(plainText.getText()));
             }
         });
+    }
+
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
     }
 }
