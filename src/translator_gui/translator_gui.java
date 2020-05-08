@@ -18,26 +18,34 @@ public class translator_gui {
     private JTextField textField2;
     public JPanel main;
     private JTextField plainText;
+    private ButtonGroup radios;
     private JRadioButton txtToMorse;
     private JRadioButton morseToTxt;
     private JButton translateBttn;
     private JTextField textField4;
 
     public translator_gui(tl_engine translator) {
+        // radios.add(txtToMorse);
+        // radios.add(morseToTxt);
         resetForm.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                textField2.setText(translator.decode(morseText.getText()));
+                plainText.setText("");
+                morseText.setText("");
             }
         });
 
         translateBttn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                textField4.setText(translator.encodeViaRelations(plainText.getText()));
+                if (txtToMorse.isSelected() && !morseToTxt.isSelected()) {
+                    String t = plainText.getText();
+                    String m = translator.encodeViaRelations(t);
+                    morseText.setText(m);
+                } else if (morseToTxt.isSelected() && !txtToMorse.isSelected()) {
+                    String m = morseText.getText();
+                    String t = translator.decode(m);
+                    plainText.setText(t);
+                }
             }
         });
-    }
-
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
     }
 }
