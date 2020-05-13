@@ -1,11 +1,14 @@
 package translator_gui;
 
 import javax.swing.*;
+import javax.swing.border.TitledBorder;
 
 import morse_tl.*;
 
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 /**
  * Erstellt von maxim
  * 05.05.2020 - 15:11
@@ -18,7 +21,6 @@ public class translator_gui {
     private JTextField textField2;
     public JPanel main;
     private JTextField plainText;
-    private ButtonGroup radios;
     private JRadioButton txtToMorse;
     private JRadioButton morseToTxt;
     private JButton translateBttn;
@@ -48,4 +50,5 @@ public class translator_gui {
             }
         });
     }
+
 }
