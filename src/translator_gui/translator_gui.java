@@ -39,7 +39,7 @@ public class translator_gui {
         translateBttn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (txtToMorse.isSelected() && !morseToTxt.isSelected()) {
-                    String t = plainText.getText();
+                    String t = plainText.getText().toUpperCase();
                     String m = translator.encodeViaRelations(t);
                     morseText.setText(m);
                 } else if (morseToTxt.isSelected() && !txtToMorse.isSelected()) {

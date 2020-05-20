@@ -107,11 +107,10 @@ public class tl_engine {
     public String encodeViaRelations(String pText) {
         String encodedText = "";
 
-        String upperCase = pText.toUpperCase();
         for (int i = 0; i < pText.length(); i++) {
             String morseKey = "";
             ArrayList<Relation> relations = new ArrayList<>();
-            String currentLetter = upperCase.substring(i, i + 1);
+            String currentLetter = pText.substring(i, i + 1);
             Node node = tree.preOrderSearch(tree.getRoot(), currentLetter);
 
             while (node != null) {
